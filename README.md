@@ -1,1 +1,1 @@
-# Week2_weekend
+# I set up the foundation for the whole project making a database that holds information about celebirties. it has a working button that takes one to the database and a unfinished button that takes someone to the favorites. on the database page there is a working add delete and update button. There is a favorite checkbox that has its own vectordrawable and it uses statelistDrawable. the reciclerview populates with the name of a celebirty and the type of celebirty they are.
