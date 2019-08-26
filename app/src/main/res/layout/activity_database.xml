@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DatabaseActivity"
+    android:orientation="vertical">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvCelebData"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@id/etCelebName"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <EditText
+        android:id="@+id/etCelebName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Celebrity Name"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toTopOf="@id/etCelebAge"/>
+
+    <EditText
+        android:id="@+id/etCelebAge"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Celebrity Age"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toTopOf="@id/etCelebGender"/>
+
+    <EditText
+        android:id="@+id/etCelebGender"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Celebrity Gender"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toTopOf="@id/etCelebType"/>
+
+    <EditText
+        android:id="@+id/etCelebType"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Celebrity Type"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toTopOf="@id/btnUpdate"/>
+
+    <Button
+        android:id="@+id/btnAdd"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="create"
+        android:onClick="onDatabasecrudClicked"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/btnDelete"
+        app:layout_constraintBottom_toTopOf="@+id/btnAddFavorite"/>
+    <Button
+        android:id="@+id/btnDelete"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="delete"
+        android:onClick="onDatabasecrudClicked"
+        app:layout_constraintLeft_toRightOf="@+id/btnAdd"
+        app:layout_constraintRight_toLeftOf="@+id/btnUpdate"
+        app:layout_constraintBottom_toTopOf="@+id/btnAddFavorite"/>
+    <Button
+        android:id="@+id/btnUpdate"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="update"
+        android:onClick="onDatabasecrudClicked"
+        app:layout_constraintLeft_toRightOf="@id/btnDelete"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/btnAddFavorite"/>
+    <Button
+        android:id="@+id/btnAddFavorite"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="look at favorites"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
